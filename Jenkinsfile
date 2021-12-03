@@ -9,7 +9,7 @@ pipeline {
             }
         stage('Test') {
           steps (
-              sh 'pytest -s -v ./calculation/tests/test_calc.py'
+              sh 'pip install -r ./calculation/requirements.txt'
           )
         }
         stage('Deploy')  (
