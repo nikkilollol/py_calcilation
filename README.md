@@ -3,6 +3,6 @@ This project contain three branches:
 2.Develop branch where approvers review and approve code. After their approve this branch merges to main branch - master branch.
 3.Master branch with the latest and approved version of code which is work with Jenkins. 
 Сode is passed to jenkins with Jenkinsfile which contain instructions for the pipeline stages: build, test and deploy.
-If status of the test is success - our code deloing to diffirent enviroments - dev, uat and prodaction.
+If status of the test is success - our code deloing to diffirent enviroments - dev, uat and production.
 
 
