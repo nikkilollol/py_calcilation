@@ -19,7 +19,6 @@ pipeline {
                 }
                 steps {
                     sh 'cp -R src/* /var/jenkins_home/${GIT_BRANCH}'
-                echo 'Deploying....'
                 }
             }
         }
