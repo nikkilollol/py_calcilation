@@ -13,8 +13,14 @@ pipeline {
             }
         }
         stage('Deploy') {
-            steps {
+            when {
+                expression {
+                    currentBuild.result == null || currentBuild.result == 'SUCCESS'
+                }
+                steps {
+                    sh 'cp -R src/* /var/jenkins_home/${GIT_BRANCH}'
                 echo 'Deploying....'
+                }
             }
         }
     }
