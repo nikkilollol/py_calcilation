@@ -12,14 +12,8 @@ pipeline {
                 sh 'pytest -s -v ./calculation/tests/test_calc.py'
             }
         }
-        stage('Deploy') {
-            when {
-                expression {
-                    currentBuild.result == null || currentBuild.result == 'SUCCESS'
-                }
-                steps {
-                    sh 'cp -R src/* /var/jenkins_home/${GIT_BRANCH}'
-                }
+         stage('Deploy') { 
+            steps { 
             }
         }
     }
