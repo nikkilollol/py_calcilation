@@ -12,7 +12,9 @@ pipeline {
                 sh 'pytest -s -v ./calculation/tests/test_calc.py'
             }
         }
-         stage('Deploy') 
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
