@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'python3 test_calc.py'
+                sh 'pytest -s -v ./calculation/tests/test_calc.py'
             }
         }
         stage('Deploy') {
